@@ -1,0 +1,17 @@
+{%extends "base.html" %}
+<!--<h1>{{ views_list }}</h1>-->
+<!--<h1>{{ views_list.0 }}</h1>取出元素-->
+
+<!--{{name|length}}返回长度-->
+<!--{{name|filesizeformat}}返回变量大小-->
+<!--{{time|date:"Y-m-d H:i:s"}}时间以及其显示-->
+<!--{{views_str|truncatechars:2}}截断字符串-->
+
+<link rel="stylesheet" href="/statics/plugins/bootstrap-3.4.1/dist/css/bootstrap.css">
+{% load static %}
+{{name}}<img src="{% static 'images/runoob-logo.png' %}" alt="runoob-logo">
+
+
+{% block mainbody %}
+<p>继承了 base.html 文件</p>
+{% endblock %}
