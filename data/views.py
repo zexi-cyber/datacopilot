@@ -1,3 +1,4 @@
+
 from django.shortcuts import render, HttpResponse
 from data import models
 from django.db.models import Avg,Max,Min,Count,Sum,F ,Q #   引入函数
@@ -34,6 +35,7 @@ def add_query(request):
         # 将唯一的元组转换回元组形式
         unique_result = tuple(unique_set)
         print(unique_result)
+        print(25555)
         return JsonResponse({
             'code': 200,
             'message': unique_result,

@@ -1,3 +1,4 @@
+
 """
 URL configuration for data_copilot project.
 

@@ -1,3 +1,4 @@
+
 from django.db import models
 
 class Brand(models.Model):
@@ -23,4 +24,3 @@ class GPU(models.Model):
 class Price(models.Model):
     Brand = models.ForeignKey("Brand", on_delete=models.CASCADE)
     GPU = models.ForeignKey("GPU", on_delete=models.CASCADE)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
