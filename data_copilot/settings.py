@@ -1,3 +1,4 @@
+
 """
 Django settings for data_copilot project.
 
@@ -37,10 +38,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'corsheaders',
     "data",
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -49,6 +52,14 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    "http://192.168.68.33:8080"
+]
+
+CORS_ALLOWED_HEADERS =('*')
 
 ROOT_URLCONF = "data_copilot.urls"
 
@@ -78,11 +89,11 @@ DATABASES = {
     'default':
     {
         'ENGINE': 'django.db.backends.mysql',    # 数据库引擎
-        'NAME': 'data_copilot', # 数据库名称
+        'NAME': '3307sql', # 数据库名称
         'HOST': '127.0.0.1', # 数据库地址，本机 ip 地址 127.0.0.1
-        'PORT': 3306, # 端口
-        'USER': 'root',  # 数据库用户名
-        'PASSWORD': 'root', # 数据库密码
+        'PORT': 3307, # 端口
+        'USER': '3307root',  # 数据库用户名
+        'PASSWORD': '201128', # 数据库密码
     }
 }
 
