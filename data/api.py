@@ -105,6 +105,7 @@ def get_sql(inputx):
     # 使用 findall 方法来查找所有匹配的 SQL 语句
     matches = re.findall(r"```sql(.+?)```", sql_statement, re.DOTALL)
     print(matches)
+    print("sql语句")
     # 打印匹配结果
     # 假设这是您想要替换的列表
     sql_string = "".join(matches)
